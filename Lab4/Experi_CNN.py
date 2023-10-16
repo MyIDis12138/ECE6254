@@ -239,14 +239,14 @@ def main():
 
     model4 = BaseCNN()
     optimizer4 = torch.optim.SGD(model4.parameters(), lr=0.001)
-    argument_transform = transforms.Compose([transforms.Resize((224, 224)),
+    augment_transform = transforms.Compose([transforms.Resize((224, 224)),
                                 transforms.RandomHorizontalFlip(p=0.5),
                                 transforms.RandomRotation(degrees=(-90, 90)),
                                 transforms.ToTensor(),
                                 transforms.Normalize((0.5,0.5,0.5), (0.5,0.5,0.5))])
-    Atrain_dataset = datasets.ImageFolder(root='./mydataset/Train_resized', transform=argument_transform)
+    Atrain_dataset = datasets.ImageFolder(root='./mydataset/Train_resized', transform=augment_transform)
     Atrain_loader = DataLoader(Atrain_dataset, batch_size=batch_size, shuffle=False)
-    model_experiment(model4, Atrain_loader, val_loader, test_loader, epochs=epochs, optimizer=optimizer4, criterion=criterion, model_name='BaseCNN-argument')
+    model_experiment(model4, Atrain_loader, val_loader, test_loader, epochs=epochs, optimizer=optimizer4, criterion=criterion, model_name='BaseCNN-augment')
 
     model5 = BaseCNN()
     optimizer5 = torch.optim.SGD(model5.parameters(), lr=0.001)

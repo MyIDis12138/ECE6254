@@ -11,3 +11,10 @@ Test Accuracy of BaseCNN-argument: 75.000%
 Test Accuracy of BaseCNN-shuffle: 65.000%
 Test Accuracy of BaseCNN-Adam: 70.000%
 Test Accuracy of BestCNN: 80.000%
+Test Accuracy of BaseCNN: 65.000%
+Test Accuracy of DropoutCNN: 70.000%
+Test Accuracy of BatchNormCNN: 75.000%
+Test Accuracy of BaseCNN-augment: 75.000%
+Test Accuracy of BaseCNN-shuffle: 65.000%
+Test Accuracy of BaseCNN-Adam: 70.000%
+Test Accuracy of BestCNN: 80.000%
